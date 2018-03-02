@@ -55,9 +55,9 @@ Physics.prototype.arrive = function(target){
 Physics.prototype.flee = function(target){
 	var desired = p5.Vector.sub(target,this.pos); 
 	var d = desired.mag(); 
-	if( d < 50 ){
+	if( d < 100 ){
 		desired.setMag(this.maxspeed);
-		desired.mult(-1);
+		desired.mult(1);
 		var gvforce = p5.Vector.sub( desired, this.vel); 
 		gvforce.limit(this.maxforce);
 		return gvforce;
