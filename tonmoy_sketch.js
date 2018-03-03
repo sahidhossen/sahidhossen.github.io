@@ -25,7 +25,7 @@ function draw(){
 		var v = physics[i];
 		v.behaviors();
 		v.update();
-		v.show();
+		v.show(255);
 		
 	}
 }

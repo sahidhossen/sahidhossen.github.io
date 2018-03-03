@@ -32,8 +32,8 @@ Physics.prototype.update = function(){
 	this.acc.mult(0); 
 }
 
-Physics.prototype.show = function(){
-	stroke(255);
+Physics.prototype.show = function(randomColor){     
+	stroke(randomColor);
 	strokeWeight(8);
 	point(this.pos.x, this.pos.y);
 }
@@ -57,7 +57,7 @@ Physics.prototype.flee = function(target){
 	var d = desired.mag(); 
 	if( d < 80 ){
 		desired.setMag(this.maxspeed);
-		desired.mult(2);
+		desired.mult(-2);
 		var gvforce = p5.Vector.sub( desired, this.vel); 
 		gvforce.limit(this.maxforce);
 		return gvforce;
