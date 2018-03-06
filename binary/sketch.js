@@ -3,7 +3,7 @@ function setup(){
   createCanvas(windowWidth,windowHeight);
   background(51);
   tree = new Tree();
-  for( var i = 1; i<40; i++ ){
+  for( var i = 1; i<100; i++ ){
     tree.addValue(floor(random(0, 100 )));
   }
   console.log( tree );
