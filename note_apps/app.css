@@ -1,0 +1,140 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+.title,.note-title {
+  margin: 0;
+}
+.flex-box {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4
+}
+
+
+.note-form {
+  margin-right: 10px;
+}
+.note-form .title {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.note-form input[name=header], .note-form select , .note-form textarea {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  padding: 5px;
+}
+.note-form select  {
+  margin-bottom: 5px;
+}
+.note-form textarea {
+  min-height: 150px;
+}
+.note-form input[name=header]{
+  margin-bottom: 5px;
+}
+
+.notes-container {
+  border: 1px solid #efefef;
+  min-height: 350px;
+  margin-left: 10px;
+}
+.notes-container .note-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.notes-container .note-list li {
+  position: relative;
+  border-bottom: 1px solid #efefef;
+  padding: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.notes-container .note-list li.active {
+  border-color: #25b4f7;
+}
+.notes-container .note-list li .note-title {
+  margin-top: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.notes-container .note-list li p {
+  margin: 0;
+  padding: 0;
+}
+
+.notes-container .note-list li span.priority {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #efefef;
+  background: #dfdfdf;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+}
+.notes-container .note-list li.normal span.priority {
+  background: #25b4f7;
+  border-color: #0a97d8;
+}
+.notes-container .note-list li.high span.priority {
+  background: #fc0a63;
+  border-color: #ba0749;
+}
+
+.notes-container .note-list li .control {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  vertical-align: middle;
+  transition: all 0.2s linear 0s;
+  transform: translateX(-100px);
+}
+.notes-container .note-list li .control span {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 3px;
+}
+.notes-container .note-list li .control span.delete {
+  background: #fc0a63;
+  color: white;
+}
+.notes-container .note-list li .control span.update {
+  background: #25b4f7;
+  color: white;
+}
+.notes-container .note-list li .content-area {
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.2s linear 0s;
+  transform: translateX(-100px);
+  flex: 1;
+}
+.notes-container .note-list li.active .content-area, .notes-container .note-list li.active .control {
+  transform: translateX(0);
+}
