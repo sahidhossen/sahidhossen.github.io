@@ -10,7 +10,7 @@ function setup(){
 	
 	createCanvas(windowWidth,windowHeight);
 	background(51)
-	var points = font.textToPoints('MD.SAHID', windowWidth/4-150, windowHeight/2, 192); 
+	var points = font.textToPoints('SAHID', windowWidth/4-150, windowHeight/2, 192); 
 	for(var i=0; i<points.length; i++ ){
 		var pt = points[i]
 		var physic = new Physics(pt.x, pt.y);
