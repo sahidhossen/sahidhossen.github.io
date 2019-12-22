@@ -7,10 +7,12 @@ function preload(){
 
 function setup(){
 	//setup code 
-	
+	let url = new URL(window.location.href);
+	let name = url.searchParams.get("name");
+		name = name === null ? "SAHID" : name.toUpperCase()
 	createCanvas(windowWidth,windowHeight);
 	background(51)
-	var points = font.textToPoints('SAHID', windowWidth/4-150, windowHeight/2, 192); 
+	var points = font.textToPoints(name, windowWidth/4-150, windowHeight/2, 192); 
 	for(var i=0; i<points.length; i++ ){
 		var pt = points[i]
 		var physic = new Physics(pt.x, pt.y);
